@@ -2,18 +2,30 @@
 board = ["-","-","-",
          "-","-","-",
          "-","-","-"]
+         
+         
 
 #Know if game is still going on by setting it to True
 game_on = True
 
+
+
+
 # Initialize our current player to be X
 current_player = "X"
+
+
+
 
 #Function to display our game board
 def display_board():
     print(board[0] + " | " + board[1] + " | " + board[2] + "      " + "1|2|3")
     print(board[3] + " | " + board[4] + " | " + board[5] + "      " + "4|5|6")
     print(board[6] + " | " + board[7] + " | " + board[8] + "      " + "7|8|9")
+
+
+
+
 
 # Funtion to define players
 def players():
@@ -29,6 +41,10 @@ def players():
     elif p1 != "O" or p1 != "X":
         print("Sorry,invalid input. Type X or O")
         play_game()
+
+
+
+
 
 #Define the player position
 def player_position():
@@ -49,6 +65,10 @@ def player_position():
             print("Position already selected, choose another position!")
     board[position] = current_player
     display_board()
+
+
+
+
 
 #Function to play our tic tac game 
 def play_game():
@@ -96,6 +116,8 @@ def play_game():
                 print("It's a Tie")
                 exit()
 
+
+
         #Function to flip player
         def flip_player():
             global current_player
@@ -105,5 +127,7 @@ def play_game():
                 current_player = "X"
         flip_player()
         check_winner()
+        
+        
 #Play our tic tac game
 play_game()
